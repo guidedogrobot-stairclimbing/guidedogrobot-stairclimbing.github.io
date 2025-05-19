@@ -266,7 +266,7 @@
             <a href="static/my_paper.pdf" target="_blank">
               <!-- <img src="static/images.png" alt="Paper preview" style="max-width: 100%; border: 1px solid #ccc;"/> -->
               <!-- <iframe src="static/static/images/abstract.pdf" width="100%" height="800px" style="border: none;"></iframe> -->
-              <iframe src="static/images/abstract.png" width="160%" height="1200px" style="border: none;"></iframe>
+              <iframe src="static/images/abstract.png" width="151%" height="1200px" style="border: none;"></iframe>
             </a>
           </div>
           <p style="margin-bottom: 1em;">
@@ -309,40 +309,71 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Control Framework</h2>
+        <!-- Abstract Image. -->
+          <div class="publication-pdf">
+            <!-- <a href="static/my_paper.pdf" target="_blank"> -->
+              <img src="static/pipeline.png" alt="Paper preview" style="max-width: 100%; border: 1px solid #ccc;"/>
+              <!-- <iframe src="static/static/images/abstract.pdf" width="100%" height="800px" style="border: none;"></iframe> -->
+              <!-- <iframe src="static/images/abstract.png" width="151%" height="1200px" style="border: none;"></iframe> -->
+            </a>
+          </div>
+          <p style="margin-bottom: 1em;">
+            To develop a noise-suppressed guide-dog locomotion controller, our primary goal was to reduce the stepping frequencey and ensure gentle foot contacts by employing a combined NMPC+WBIC architecture.
+          </p>
+          <p style="margin-bottom: 1em;">
+            NMPC (with full orientation representation) is solved by single-interation SQP, which allows 500 Hz update frequency, minimizing latency and enhancing over-all robot stability.
+          </p>
+        </div>
+      </div>
+    </div>
+<section class="section">
+  <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-3">Default vs. Ours</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Go1 default controller exhibits excessive roll, whereas our controller achieves superior balance control, resulting in lower noise levels.
+            </p>
+            <video id="vs" controls playsinline height="100%">
+              <source src="./static/videos/stair02.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Stability evaluation</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            We tested our controller on a Unitree Go1 robot to quantitatively evaluate noise reduction and stability.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
+          <video id="stability" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/stair03.mp4"
                     type="video/mp4">
           </video>
         </div>
       </div>
       <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+        <div class="content">
+          <h2 class="title is-3">Visual Effects</h2>
+          <p>
+            We employed a mixed-methods approach to evaluate the walking and stair-climbing experience enabled by our controller with four BLV individuals.
+          </p>
+          <video id="user-study" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/stair04.mp4"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -443,19 +474,21 @@
 </section> -->
 
 
+<!-- TODO: arXiv bibex update -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+  title     = {Human-Centered Developmen},
+  journal   = {arXiv},
+  year      = {2025},
 }</code></pre>
   </div>
 </section>
 
 
+<!-- TODO: paper pdf update -->
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
@@ -463,18 +496,18 @@
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <!-- <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
-      </a>
+      </a> -->
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <p>
+          <!-- <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+          </p> -->
           <p>
             The website (<a href="https://github.com/nerfies/nerfies.github.io">source code</a>) is from <a href="https://github.com/nerfies/nerfies.github.io"><span class="dnerf">Nerfies</span></a>.           </p>
         </div>
